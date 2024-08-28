@@ -9,8 +9,7 @@
         "main.ts",
         "README.md",
         "assets.json",
-        "missiontohubble.md",
-        "gorillasuit.md"
+        "missiontohubble.md"
     ],
     "testFiles": [
         "test.ts"
