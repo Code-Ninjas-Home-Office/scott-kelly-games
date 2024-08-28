@@ -448,8 +448,8 @@ namespace SpriteKind {
 
 Use a **variable** to keep track of how many crew members were scared! This number will show at the end of the game.
 
-- :variable: From ``||variables:Variables||`` drag ``||variables:set to 0||`` into the bottom of ``||function:function gorillaGame||`` then select ``||variables:scareCount||`` from the drop down.
-- :variables: From ``||variables:Variables||`` drag ``||variables:change by 1||`` into the bottom of ``||logic:if||`` then select ``||variables:scareCount||`` from the drop down.
+- :align justify: From ``||variables:Variables||`` drag ``||variables:set to 0||`` into the bottom of ``||functions(no click):function gorillaGame||`` then select ``||variables:scareCount||`` from the drop down.
+- :align justify: From ``||variables:Variables||`` drag ``||variables:change by 1||`` into the bottom of ``||logic:if||`` then select ``||variables:scareCount||`` from the drop down to increase the **variable** for each scared crew member.
 
 ![Logo](https://github.com/Code-Ninjas-Home-Office/game-building-session-tutorials-2024/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
@@ -484,7 +484,7 @@ Set a countdown timer that starts when Scott Kelly first puts on the gorilla sui
 
 - :id card: From ``||info:Info||`` drag ``||info:start countdown||`` into the bottom of ``||function:function gorillaGame||``.
 - :id card: From ``||info:Info||`` drag the entire ``||info:on countdown end||`` container into the coding area.
-- :paper plane: From ``||sprites:Sprites||`` drag ``||sprites:set scottKellySprite image to||`` and ``||sprites:set scottKellySprite ghost through tiles||`` into the ``||info:on countdown end||`` container.
+- :paper plane: From ``||sprites:Sprites||`` drag ``||sprites:set scottKellySprite image to||`` and ``||sprites:set scottKellySprite ghost through tiles||`` into the bottom of the ``||info:on countdown end||`` container.
 - :tree: From ``||scene:Scene||`` drag ``||scene:end screen effect||`` underneath.
 
 ![Logo](https://github.com/Code-Ninjas-Home-Office/game-building-session-tutorials-2024/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
@@ -539,7 +539,7 @@ namespace SpriteKind {
 Let the player know how to play the gorilla suit mini-game, then add background music to enhance the mini-game!
 
 - :circle: From ``||game:Game||`` drag ``||game:show long text||`` below the existing ``||game(no click):show long text||`` block inside ``||function:function gorillaGame||``.
-- :mouse pointer: Click inside the white bubble to add instructions, such as "You have 10 seconsd to scare as many crew members as possible!"
+- :mouse pointer: Click inside the white bubble to add instructions, such as "You have 10 seconds to scare as many crew members as possible!"
 - :mouse pointer: Select ``||game(noclick):center||`` from the dropdown to match the placement of the other dialog box.
 - :headphones: From ``||music:Music||`` drag ``||music:play melody||`` underneath. Click to open the melody editor, then select or create a melody to play during the mini-game. Adjust the tempo, or speed of the music, too.
 - :headphones: Click ▼ then select ``||music(noclick):looping in background||`` so the sound effect plays throughout the mini-game.
@@ -566,10 +566,9 @@ let scottKellySprite: Sprite = null
 If you are adding the space walk mini-game to your project, add the code below to prevent the Scott Kelly sprite from exiting the ISS during the gorilla suit mini-game!
 
 - :tree: From ``||scene:Scene||`` drag 2 ``||scene:set wall at||`` blocks into the ``||functions(no click):function gorillaGame||`` container.
-- :mouse pointer: Set both toggles to ``||loops(no click):<ON>||``. 
-- :mouse pointer: Set ``||scene:col||`` to **23** in both blocks, and set ``||scene:row||`` to **11** in one block and **12** in the other.
-- :tree: Drag 2 more ``||scene:set wall at||`` blocks into the ``||info(no click):on countdown end||`` container.
-- :mouse pointer: Set both toggles to ``||images(no click):<OFF>||``. Set ``||scene:col||`` and ``||scene:row||`` to the same values as above.
+- :mouse pointer: Set both toggles to ``||loops(no click):<ON>||``. Set ``||scene(no click):col||`` to **23** in both blocks, and set ``||scene(no click):row||`` to **11** in one block and **12** in the other.
+- :tree: Duplicate the 2 ``||scene(no click):set wall at||`` blocks then drag them into the ``||info(no click):on countdown end||`` container.
+- :mouse pointer: Set both toggles on the duplicated blocks to ``||images(no click):<OFF>||``.
 
 
 ![Logo](https://github.com/Code-Ninjas-Home-Office/game-building-session-tutorials-2024/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
@@ -612,4 +611,6 @@ Congratulations on completing the Scott Kelly Gorilla Suit mini game!
 
 ![BTS Ninja Image](https://github.com/Code-Ninjas-Home-Office/scott-kelly-games/blob/master/images/BTS%20Ninja%20Image.png?raw=true "BTS Ninja Image") 
 
-Click **Done** then give your project a title and click **Share Project** to create a shareable link to access your game! Then, add the Scott Kelly Space Walk mini-game to your project!
+Click **Done** then give your project a title and click **Share Project** to create a shareable link to access your game! 
+
+Then, add the Scott Kelly Space Walk mini-game to your project!
