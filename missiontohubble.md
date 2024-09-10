@@ -180,7 +180,7 @@ Let's add in some asteroids to avoid as you navigate through space!
 - :headphones: Open ``||music:Music||`` and drag a ``||music:play sound||`` into the top of the ``||sprites(noclick):overlaps||`` container. 
 - :headphones: Click ▼ to select the sound ``||music(noclick):knock||`` so it plays in the background when an asteroid sprite overlaps the Discovery sprite.
 
-Click ▶ to see the asteroids come from the right side of the screen, then notice what happens when they overlap the Discovery spaceship.
+Play your game to see the asteroids come from the right side of the screen, then notice what happens when they overlap the Discovery spaceship.
 
 ![Logo](https://github.com/Code-Ninjas-Home-Office/game-building-session-tutorials-2024/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
@@ -189,6 +189,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Projectile, function (sprite, ot
     sprites.destroy(otherSprite)
     info.changeLifeBy(-1)
 })
+music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.InBackground)
 ```
 
 ```blocks
@@ -225,8 +226,7 @@ startGame()
 When the countdown timer reaches zero, make the Hubble Telescope appear!
 
 - :id card: Open ``||info:Info||`` and drag the entire ``||info:on countdown end||`` container into the coding area.
-- :headphones: Drag a ``||music:play sound||`` block into the ``||info(noclick):on countdown end||`` container then select a sound to play when the Hubble Telescope sprite appears.
-- :headphones: Click ▼ then select ``||music(noclick):in background||`` so the sound effect does not interrupt the game.
+- :headphones: Drag a ``||music:play sound||`` block into the ``||info(noclick):on countdown end||`` container then select a sound to play to play in the background when the Hubble Telescope sprite appears.
 
 ![Logo](https://github.com/Code-Ninjas-Home-Office/game-building-session-tutorials-2024/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
@@ -236,6 +236,7 @@ info.onCountdownEnd(function () {
     hubble.setPosition(140, 55)
 })
 let hubble: Sprite = null
+music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.InBackground)
 ``` 
 ```blocks
 info.onCountdownEnd(function () {
@@ -251,10 +252,9 @@ let hubble: Sprite = null
 Celebrate the Discovery's arrival to the Hubble Telescope!
 
 - :paper plane: Open ``||sprites:Sprites||`` then drag the entire ``||sprites:on Player overlaps Player||`` container into the coding area.
-- :headphones: Drag a ``||music:play sound||`` block into the ``||sprites(noclick):overlaps||`` container then select a celebratory sound to play when the Discovery sprite overlaps the Hubble Telescope sprite.
-- :headphones: Click ▼ then select ``||music(noclick):in background||`` so the sound effect does not interrupt the game.
+- :headphones: Drag a ``||music:play sound||`` block into the ``||sprites(noclick):overlaps||`` container then select a celebratory sound to play in the background when the Discovery sprite overlaps the Hubble Telescope sprite.
 
-Click ▶ to test the code for the Hubble Telescope, and see what happens when the Discovery spaceship overlaps it.
+Play your game to test the code for the Hubble Telescope, and see what happens when the Discovery spaceship overlaps it.
 
 ![Logo](https://github.com/Code-Ninjas-Home-Office/game-building-session-tutorials-2024/blob/master/images/CN-Logo.png?raw=true "CN Logo") 
 
@@ -263,6 +263,7 @@ sprites.onOverlap(SpriteKind.Player, SpriteKind.Player, function (sprite, otherS
     sprites.destroyAllSpritesOfKind(SpriteKind.Player)
     sprites.destroyAllSpritesOfKind(SpriteKind.Projectile)
 })
+music.play(music.melodyPlayable(music.baDing), music.PlaybackMode.InBackground)
 let hubble: Sprite = null
 let discovery: Sprite = null
 let projectile: Sprite = null
@@ -336,7 +337,7 @@ Your game is complete! But if you have more time, try adding one or more of thes
 
 ---
 Make the background image move as the spaceship soars through space! 
-- :move: From ``||scroller:Scroller||`` drag ``||scroller:scroll background image||`` into the ``||function(noclick):startGame||`` container under ``||scene(noclick):set background image||``. 
+- :move: From ``||scroller:Scroller||`` drag ``||scroller:scroll background image||`` into the ``||functions(noclick):startGame||`` container under ``||scene(noclick):set background image||``. 
 - :move: Stop the background image from moving by dragging ``||scroller:scroll background image||`` into the ``||info(noclick):on countdown end||`` container, then change the **vx** value to **0**.
 
 ---
@@ -348,7 +349,7 @@ Add a splash screen at the start of your game!
 ---
 
 Randomize the asteroid images!
-- :numbered list: Click **Advanced** then open ``||arrays:Arrays||`` to drag ``||arrays:get random value from||`` to replace the image in the ``||variables(noclick):set projectile||`` block.
+- :numbered list: Under **Advanced** open ``||arrays:Arrays||`` to drag ``||arrays:get random value from||`` to replace the image in the ``||variables(noclick):set projectile||`` block.
 - :numbered list: From ``||arrays:Arrays||`` drag ``||variables(arrays):set list to||`` into the top of the ``||functions(noclick):createAsteroids||`` container.
 - :mouse pointer: Click ▼ to change the name ``||variables(noclick):list||`` to ``||variables(noclick):asteroidList||``.
 - :framed picture: From ``||images:Images||`` drag image blocks into the white bubbles in the ``||arrays(noclick):array of||`` block. Add 2 to 5 image blocks, then click an image block to select an asteroid or space debris image from **My Assets**.
